@@ -151,9 +151,9 @@
     width: 300px;
     margin-left: 305px;
 }
-.menu-list:focus ~  li,
-.menu-list:active ~ li,
-.menu-list li:nth-child(1):hover .head {
+.menu-list li a:focus ~ .head,
+.menu-list li a:active ~ .head,
+.menu-list li .head:hover {
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease 0s;
