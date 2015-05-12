@@ -173,7 +173,9 @@
     opacity: 0;
     transition: all 0.3s ease 0s;
 }
-.sub-menu-list>li:hover .one {
+.sub-menu-list>li:focus ~ .one,
+.sub-menu-list>li:active ~ .one,
+.sub-menu-list>li .one:hover {
     /*display: block;*/
     visibility: visible;
     opacity: 1;
