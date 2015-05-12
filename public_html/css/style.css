@@ -25,7 +25,7 @@
     z-index: 100;
 }
 .menu .menu-list {
-    height: 120px;
+    /*height: 120px;*/
     width: 210px;
     position: absolute;
     top: 40%;
@@ -81,8 +81,18 @@
     top: 43%;
     color: #413f3f;
 }
+
+
+.menu-list li a:focus ~ .sub-menu-list,
+.menu-list li a:active ~ .sub-menu-list,
+.menu-list li .sub-menu-list:hover
+/*.menu .menu-list li:hover .sub-menu-list*/
+{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+}
 .sub-menu-list {
-    /* display: none; */
     width: 130px;
     height: 150px;    
     position: absolute;
@@ -95,13 +105,6 @@
     transition: all 0.3s ease 0s;
     visibility: hidden;
 }
-.menu .menu-list li:hover .sub-menu-list {
-    /* display: block; */
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.3s ease 0s;
-}
-
 .sub-menu-list li:hover {
     color: #000;
     background: #fff;
@@ -120,6 +123,7 @@
     text-decoration: none;
     color: #e3dfdf;
     font-size: 18px;
+    display: block;
 }
 
 .head {
@@ -160,7 +164,6 @@
 }
 
 .one {
-    /*display: none;*/
     width: 100px;    
     position: absolute;
     left: 100%;
@@ -173,10 +176,12 @@
     opacity: 0;
     transition: all 0.3s ease 0s;
 }
-.sub-menu-list>li:focus ~ .one,
-.sub-menu-list>li:active ~ .one,
-.sub-menu-list>li .one:hover {
-    /*display: block;*/
+
+/*.sub-menu-list>li:hover .one*/
+.sub-menu-list li a:focus ~ .one,
+.sub-menu-list li a:active ~ .one,
+.sub-menu-list li .one:hover
+{
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease 0s;
@@ -192,13 +197,13 @@
     z-index: 100; 
     padding: 30px 30px 30px 30px;
     overflow: auto;
-    /*visibility: hidden;*/
 }
-.one li:hover ul {
+.one li a:focus ~ ul,
+.one li a:active ~ ul,
+.one li ul:hover
+/*.one li:hover ul*/
+{
     display: block;
-/*    visibility: visible;
-    opacity: 1;
-    transition: all 0.4s ease 0s;*/
 }
 .one li ul li {
     margin-bottom: 10px;
@@ -216,280 +221,28 @@
     padding: 10px 15px 10px 15px;
     margin-top: -10px;
 }
-/*.one li:nth-child(1) ul {    
-    top: 0;   
-}
-.one li:nth-child(2) ul {
-    top: -331px;
-}
-.one li:nth-child(3) ul {
-    top: -394px;
-}
-.one li:nth-child(4) ul {
-    top: -424px;
-}
-.one li:nth-child(5) ul {
-    top: -455px;
-}*/
 
-/*.two {
-    display: none;
-    width: 100px;    
-    position: absolute;
-    left: 100%;
-    top: -330px;
-    background-color: #000000;
-    z-index: 100;
-    padding: 300px 0 180px 20px;
+
+.sborka img {
+    margin: 0 30px 30px 0;
 }
-.sub-menu-list li:nth-child(2):hover .two {
-    display: block;
-}  
-.two li ul {
-    display: none;
-    width: 640px;
-    height: 607px;
-    position: absolute;
-    left: 100%;
-    background-color: #fff;
-    z-index: 100; 
-    padding: 30px 30px 30px 30px;
-    overflow: auto;
-}
-.two li:nth-child(1):hover ul,
-.two li:nth-child(2):hover ul,
-.two li:nth-child(3):hover ul,
-.two li:nth-child(4):hover ul,
-.two li:nth-child(5):hover ul {
-    display: block;
-}
-.two li ul li {
-    margin-bottom: 10px;
-}
-.two li ul li img {
-    width: 640px;
-    height: 100%;
-}
-.two li ul li span {
-    width: 610px;
-    display: block;
+.sborka p {
     color: #e3dfdf;
-    font-size: 18px;
-    font-family: Myriad Pro Regular;
-    background-color: #000;
-    padding: 10px 15px 10px 15px;
-    margin-top: -10px;
+    line-height: 22px;
+    font-size: 16px;
+    font-family: arial;
+    margin-bottom: 20px;
 }
-.two li:nth-child(1) ul {   
-    top: -300px;   
+.menu-list li a:focus ~ .sborka,
+.menu-list li a:active ~ .sborka,
+.menu-list li .sborka:hover 
+/*.menu-list li:nth-child(3):hover .sborka*/
+{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
 }
-.two li:nth-child(2) ul {
-    top: -331px;
-}
-.two li:nth-child(3) ul {
-    top: -394px;
-}
-.two li:nth-child(4) ul {
-    top: -424px;
-}
-.two li:nth-child(5) ul {
-    top: -455px;
-}
-
-.three {
-    display: none;
-    width: 100px;    
-    position: absolute;
-    left: 100%;
-    top: -360px;
-    background-color: #000000;
-    z-index: 100;
-    padding: 300px 0 180px 20px;
-}
-.sub-menu-list li:nth-child(3):hover .three {
-    display: block;
-}  
-.three li ul {
-    display: none;
-    width: 640px;
-    height: 607px;
-    position: absolute;
-    left: 100%;
-    background-color: #fff;
-    z-index: 100; 
-    padding: 30px 30px 30px 30px;
-    overflow: auto;
-}
-.three li:nth-child(1):hover ul,
-.three li:nth-child(2):hover ul,
-.three li:nth-child(3):hover ul,
-.three li:nth-child(4):hover ul,
-.three li:nth-child(5):hover ul {
-    display: block;
-}
-.three li ul li {
-    margin-bottom: 10px;
-}
-.three li ul li img {
-    width: 640px;
-    height: 100%;
-}
-.three li ul li span {
-    width: 610px;
-    display: block;
-    color: #e3dfdf;
-    font-size: 18px;
-    font-family: Myriad Pro Regular;
-    background-color: #000;
-    padding: 10px 15px 10px 15px;
-    margin-top: -10px;
-}
-.three li:nth-child(1) ul { 
-    top: -300px;   
-}
-.three li:nth-child(2) ul {
-    top: -331px;
-}
-.three li:nth-child(3) ul {
-    top: -394px;
-}
-.three li:nth-child(4) ul {
-    top: -424px;
-}
-.three li:nth-child(5) ul {
-    top: -455px;
-}
-
-.four {
-    display: none;
-    width: 100px;    
-    position: absolute;
-    left: 100%;
-    top: -390px;
-    background-color: #000000;
-    z-index: 100;
-    padding: 300px 0 180px 20px;
-}
-.sub-menu-list li:nth-child(4):hover .four {
-    display: block;
-} 
-.four li ul {
-    display: none;
-    width: 640px;
-    height: 607px;
-    position: absolute;
-    left: 100%;
-    background-color: #fff;
-    z-index: 100; 
-    padding: 30px 30px 30px 30px;
-    overflow: auto;
-}
-.four li:nth-child(1):hover ul,
-.four li:nth-child(2):hover ul,
-.four li:nth-child(3):hover ul,
-.four li:nth-child(4):hover ul,
-.four li:nth-child(5):hover ul {
-    display: block;
-}
-.four li ul li {
-    margin-bottom: 10px;
-}
-.four li ul li img {
-    width: 640px;
-    height: 100%;
-}
-.four li ul li span {
-    width: 610px;
-    display: block;
-    color: #e3dfdf;
-    font-size: 18px;
-    font-family: Myriad Pro Regular;
-    background-color: #000;
-    padding: 10px 15px 10px 15px;
-    margin-top: -10px;
-}
-.four li:nth-child(1) ul {   
-    top: -300px;   
-}
-.four li:nth-child(2) ul {
-    top: -331px;
-}
-.four li:nth-child(3) ul {
-    top: -394px;
-}
-.four li:nth-child(4) ul {
-    top: -424px;
-}
-.four li:nth-child(5) ul {
-    top: -455px;
-}
-
-.five {
-    display: none;
-    width: 100px;    
-    position: absolute;
-    left: 100%;
-    top: -420px;
-    background-color: #000000;
-    z-index: 100;
-    padding: 300px 0 180px 20px;
-}
-.sub-menu-list li:nth-child(5):hover .five {
-    display: block;
-}  
-.five li ul {
-    display: none;
-    width: 640px;
-    height: 607px;
-    position: absolute;
-    left: 100%;  
-    background-color: #fff;
-    z-index: 100; 
-    padding: 30px 30px 30px 30px;
-    overflow: auto;
-}
-.five li:nth-child(1):hover ul,
-.five li:nth-child(2):hover ul,
-.five li:nth-child(3):hover ul,
-.five li:nth-child(4):hover ul,
-.five li:nth-child(5):hover ul {
-    display: block;
-}
-.five li ul li {
-    margin-bottom: 10px;
-}
-.five li ul li img {
-    width: 640px;
-    height: 100%;
-}
-.five li ul li span {
-    width: 610px;
-    display: block;
-    color: #e3dfdf;
-    font-size: 18px;
-    font-family: Myriad Pro Regular;
-    background-color: #000;
-    padding: 10px 15px 10px 15px;
-    margin-top: -10px;
-}
-.five li:nth-child(1) ul {  
-    top: -300px;   
-}
-.five li:nth-child(2) ul { 
-    top: -331px;  
-}
-.five li:nth-child(3) ul {   
-    top: -394px;  
-}
-.five li:nth-child(4) ul {   
-    top: -424px;   
-}
-.five li:nth-child(5) ul {   
-    top: -455px;
-}*/
-
 .sborka {
-    /*display: none;*/
     visibility: hidden;
     width: 910px;
     height: 607px;
@@ -503,25 +256,7 @@
     opacity: 0;
     transition: all 0.3s ease 0s;
 }
-.sborka img {
-    margin: 0 30px 30px 0;
-}
-.sborka p {
-    color: #e3dfdf;
-    line-height: 22px;
-    font-size: 16px;
-    font-family: arial;
-    margin-bottom: 20px;
-}
-.menu-list li:nth-child(3):hover .sborka {
-    /*display: block;*/
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.3s ease 0s;
-}
-
 .contacts {
-    /*display: none;*/
     visibility: hidden;
     width: 910px;
     height: 607px;
@@ -535,8 +270,11 @@
     opacity: 0;
     transition: all 0.3s ease 0s;
 }
-.menu-list li:nth-child(4):hover .contacts {
-    /*display: block;*/
+.menu-list li a:focus ~ .contacts,
+.menu-list li a:active ~ .contacts,
+.menu-list li .contacts:hover
+/*.menu-list li:nth-child(4):hover .contacts*/
+{
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease 0s;
